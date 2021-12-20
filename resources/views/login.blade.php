@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
     <form action="login" method="POST">
-        <div class="container">
+        <div class="container login_style">
             <br>
             <div class="row ">
                 <div class="col-md-5 offset-md-4">
