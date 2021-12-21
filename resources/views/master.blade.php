@@ -35,6 +35,25 @@
             height: 400px !important
         }
 
+        img.trending-images {
+            height: 100px;
+
+        }
+
+        div.trending-all-images {
+            float: left;
+            width: 20%;
+        }
+
+        div.trending-style {
+            padding: 10px;
+        }
+
+        img.details-img-style {
+            height: 200px;
+            
+        }
+
         div.product_style {
             height: 500px;
         }

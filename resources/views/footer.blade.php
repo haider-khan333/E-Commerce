@@ -1,4 +1,4 @@
-<div class="footer-basic">
+<div style="clear:both" class="footer-basic">
     <footer>
         <ul class="list-inline">
             <li class="list-inline-item"><a href="#">About Us</a></li>

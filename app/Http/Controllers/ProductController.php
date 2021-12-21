@@ -14,4 +14,10 @@ class ProductController extends Controller
 
         return view("product", ["products" => $product_data]);
     }
+
+    function details($id)
+    {
+        $product_data_details = Product::find($id);
+        return view("details", ["products" => $product_data_details]);
+    }
 }
