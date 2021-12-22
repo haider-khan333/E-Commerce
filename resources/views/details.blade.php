@@ -13,9 +13,20 @@
                 <h5>Category: {{ $products['products_category'] }}</h5>
                 <h5>Description: {{ $products['products_description'] }}</h5>
                 <br><br>
-                <button class="btn btn-primary">Add to Cart</button>
+                <form action="/add_to_cart" method="POST">
+                    @csrf
+                    <input type="hidden" name="product_id" id="product_id" value="{{ $products['id'] }}">
+                    <button class="btn btn-primary">Add to Cart</button>
+                </form>
                 <br><br>
                 <button class="btn btn-success">Buy</button>
+
+                @if (session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('message') }}
+                    </div>
+                @endif
+
             </div>
         </div>
     </div>
