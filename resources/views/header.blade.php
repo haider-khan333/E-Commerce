@@ -1,26 +1,75 @@
-<header class="p-3 bg-dark text-white">
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
+<?php
+use App\Http\Controllers\ProductController;
+try {
+    $total_count = ProductController::getCartItems();
+} catch (\Throwable $th) {
+    $total_count = 0;
+}
+?>
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 text-secondary">E-Commerce | </a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Orders</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-            </ul>
+<section class="ftco-section">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
 
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <form action="#" class="searchform order-lg-last">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control pl-3" placeholder="Search Products">
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" placeholder="" class="btn btn-primary">Search</button>
+                        </div>
+
+                    </div>
+
+                    <div class="row-md-12">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-info" disabled>
+                                Cart <span class="badge badge-light">{{ $total_count }}</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row-md-12 text-lg-right">
+                        <div class="col-md-12 navbar-nav mr-auto">
+                            @if (Session::has('user'))
+                                <li class="nav-item active"><a href="/" class="nav-link">|
+                                        {{ Session::get('user')['name'] }}</a></li>
+
+                            @endif
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
             </form>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a href="/" class="nav-link">E-Commerce | </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Orders</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    @if (Session::has('user'))
+                        <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
 
-            <div class="text-end">
-                <button type="button" class="btn btn-primary">Cart <span class="badge">0</span></button>
+                    @else
+                        <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+                    @endif
+
+
+
+                </ul>
             </div>
         </div>
-    </div>
-</header>
+    </nav>
+    <!-- END nav -->
+
+</section>

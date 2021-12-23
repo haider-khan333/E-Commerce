@@ -1,6 +1,8 @@
 @extends('master')
 @section('content')
     <br>
+
+
     <div class="product_style">
         <div id="demo" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -29,7 +31,7 @@
         <div class="trending-style">
             <h3>Trending Products</h3>
             @foreach ($products as $item)
-                <a href="details/{{ $item['id'] }}">
+                <a href="details/{{ $item['id'] }}" class="link-secondary">
                     <div class="trending-all-images">
                         <img class="trending-images" src="{{ $item['products_gallery'] }}"
                             alt="{{ $item['products_name'] }}">
