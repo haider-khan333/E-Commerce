@@ -1,9 +1,6 @@
 @extends('master')
 @section('content')
-    <br>
-
-
-    <div class="product_style">
+    <div class="product_style mt-3">
         <div id="demo" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 @foreach ($products as $item)
@@ -13,12 +10,7 @@
                                 alt="{{ $item['products_name'] }}">
                         </a>
                     </div>
-
-
-
                 @endforeach
-
-
             </div>
             <a class="carousel-control-prev" href="#demo" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>

@@ -29,9 +29,12 @@ try {
 
                     <div class="row-md-12">
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-info" disabled>
-                                Cart <span class="badge badge-light">{{ $total_count }}</span>
-                            </button>
+                            <a href="/cart-items">
+                                <button type="button" class="btn btn-info">
+                                    Cart <span class="badge badge-light">{{ $total_count }}</span>
+                                </button>
+                            </a>
+
                         </div>
                     </div>
 
@@ -64,12 +67,9 @@ try {
                         <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
                     @endif
 
-
-
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- END nav -->
 
 </section>

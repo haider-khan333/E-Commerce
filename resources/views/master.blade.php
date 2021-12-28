@@ -44,6 +44,16 @@
 
         }
 
+        div.divider {
+            border-bottom: 1px solid #aaa;
+            margin: 20px;
+            padding-bottom: 20px;
+        }
+
+        div.cart_products {
+            padding: 20px;
+        }
+
         div.trending-all-images {
             float: left;
             width: 20%;
