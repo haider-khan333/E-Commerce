@@ -7,6 +7,7 @@
             <div class="products">
                 <h3>Cart Items</h3>
                 @foreach ($products_object as $products_item)
+                
                     <div class="row item mt-5 divider">
                         <div class="col-sm-2">
                             <a href="details/{{ $products_item->id }}">
@@ -23,9 +24,10 @@
                             <h4>Total products 0</h4>
                         </div>
                         <div class="col-sm-3">
-                            <button class="btn btn-warning">
-                                Delete Product
-                            </button>
+                            <a href="/remove-cart/{{ $products_item->cart_id }}">
+                                <button class="btn btn-warning">
+                                    Delete Product
+                                </button></a>
                         </div>
                     </div>
 

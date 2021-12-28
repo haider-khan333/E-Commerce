@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ProductController;
+
 try {
     $total_count = ProductController::getCartItems();
 } catch (\Throwable $th) {
@@ -29,11 +30,20 @@ try {
 
                     <div class="row-md-12">
                         <div class="col-md-12">
-                            <a href="/cart-items">
-                                <button type="button" class="btn btn-info">
+                            @if (Session::has('user'))
+                                <a href="/cart-items">
+                                    <button type="button" class="btn btn-info">
+                                        Cart <span class="badge badge-light">{{ $total_count }}</span>
+                                    </button>
+                                </a>
+
+                            @else
+                                <button type="button" class="btn btn-info" disabled>
                                     Cart <span class="badge badge-light">{{ $total_count }}</span>
                                 </button>
-                            </a>
+
+                            @endif
+
 
                         </div>
                     </div>
