@@ -5,9 +5,20 @@
     <div class="cart_products">
         <div class="col-sm-11">
             <div class="products">
-                <h3>Cart Items</h3>
+                <div class="row">
+                    <div class="row col-sm-10">
+                        <h3>Cart Items</h3>
+                    </div>
+                    <div class="row col-sm-2">
+                        <a href="order_now">
+                            <button class="btn btn-success">Order now</button>
+                        </a>
+                    </div>
+
+                </div>
+
+
                 @foreach ($products_object as $products_item)
-                
                     <div class="row item mt-5 divider">
                         <div class="col-sm-2">
                             <a href="details/{{ $products_item->id }}">

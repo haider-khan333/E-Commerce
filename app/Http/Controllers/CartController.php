@@ -25,4 +25,17 @@ class CartController extends Controller
         cart::destroy($id);
         return redirect("/cart-items");
     }
+
+    function orderNow()
+    {
+        $user_id = Session::get("user")["id"];
+        $total_amount = DB::table("cart")->join("products", "cart.products_id", "=", "products.id")->where("cart.users_id", $user_id)->sum("products.products_price");
+
+        return view("order_now", ["total_amount" => $total_amount]);
+    }
+
+    function payment_details(Request $request)
+    {
+        return $request;
+    }
 }

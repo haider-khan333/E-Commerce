@@ -11,7 +11,6 @@ try {
 <section class="ftco-section">
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars"></span> Menu
@@ -68,7 +67,7 @@ try {
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a href="/" class="nav-link">E-Commerce | </a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Orders</a></li>
+                    <li class="nav-item" ><a href="/cart-items" class="nav-link" >Orders</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                     @if (Session::has('user'))
                         <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>

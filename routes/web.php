@@ -30,3 +30,5 @@ Route::get("details/{id}", [ProductController::class, "details"]);
 Route::post("/add_to_cart", [ProductController::class, "addToCart"]);
 Route::get("/cart-items", [CartController::class, "controller"]);
 Route::get("remove-cart/{id}", [CartController::class, "removeCart"]);
+Route::get("order_now", [CartController::class, "orderNow"]);
+Route::post("payment_details", [CartController::class, "payment_details"]);
