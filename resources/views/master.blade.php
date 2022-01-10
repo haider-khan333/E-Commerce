@@ -13,8 +13,16 @@
 
 
 
-    <title>E-Commerce Project</title>
+    <title>Gardezi Products</title>
     <style>
+        div.login-wrap {
+            background-color: #aaa;
+        }
+
+        div.text-wrap {
+            background-color: pink;
+        }
+
         .footer-basic {
             padding: 50px;
             background-color: white;

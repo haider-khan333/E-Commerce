@@ -56,18 +56,12 @@ try {
                             @endif
                         </div>
                     </div>
-
-
-
-
-
-
                 </div>
             </form>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a href="/" class="nav-link">E-Commerce | </a></li>
-                    <li class="nav-item" ><a href="/cart-items" class="nav-link" >Orders</a></li>
+                    <li class="nav-item active"><a href="/" class="nav-link">E-Gardezi | </a></li>
+                    <li class="nav-item"><a href="/my-orders" class="nav-link">Orders</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                     @if (Session::has('user'))
                         <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>

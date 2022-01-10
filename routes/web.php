@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\MyOrderController;
 use Illuminate\Support\Facades\Session;
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,4 @@ Route::get("/cart-items", [CartController::class, "controller"]);
 Route::get("remove-cart/{id}", [CartController::class, "removeCart"]);
 Route::get("order_now", [CartController::class, "orderNow"]);
 Route::post("payment_details", [CartController::class, "payment_details"]);
+Route::get("my-orders", [MyOrderController::class, "my_orders"]);

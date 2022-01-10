@@ -1,3 +1,12 @@
+<?php
+use App\Http\Controllers\ProductController;
+
+try {
+    $total_count = ProductController::getCartItems();
+} catch (\Throwable $th) {
+    $total_count = 0;
+}
+?>
 @extends("master")
 
 @section('content')
@@ -10,43 +19,45 @@
                         <h3>Cart Items</h3>
                     </div>
                     <div class="row col-sm-2">
-                        <a href="order_now">
-                            <button class="btn btn-success">Order now</button>
-                        </a>
+                        @if ($total_count != 0)
+                            <a href="order_now">
+                                <button class="btn btn-success">Order now</button>
+                            </a>
+                        @endif
                     </div>
-
                 </div>
 
-
-                @foreach ($products_object as $products_item)
+                @if ($total_count != 0)
+                    @foreach ($products_object as $products_item)
+                        <div class="row item mt-5 divider">
+                            <div class="col-sm-2">
+                                <a href="details/{{ $products_item->id }}">
+                                    <img class="trending-images" src="{{ $products_item->products_gallery }}"
+                                        alt="{{ $products_item->products_name }}">
+                                </a>
+                            </div>
+                            <div class="col-sm-4">
+                                <h4>{{ $products_item->products_name }}</h4>
+                                <h5>${{ $products_item->products_price }}</h5>
+                                <h6>{{ $products_item->products_description }}</h6>
+                            </div>
+                            <div class="col-sm-3">
+                                <h4>Total products 0</h4>
+                            </div>
+                            <div class="col-sm-3">
+                                <a href="/remove-cart/{{ $products_item->cart_id }}">
+                                    <button class="btn btn-warning">
+                                        Delete Product
+                                    </button></a>
+                            </div>
+                        </div>
+                    @endforeach
+                @else
                     <div class="row item mt-5 divider">
-                        <div class="col-sm-2">
-                            <a href="details/{{ $products_item->id }}">
-                                <img class="trending-images" src="{{ $products_item->products_gallery }}"
-                                    alt="{{ $products_item->products_name }}">
-                            </a>
-                        </div>
-                        <div class="col-sm-4">
-                            <h4>{{ $products_item->products_name }}</h4>
-                            <h5>${{ $products_item->products_price }}</h5>
-                            <h6>{{ $products_item->products_description }}</h6>
-                        </div>
-                        <div class="col-sm-3">
-                            <h4>Total products 0</h4>
-                        </div>
-                        <div class="col-sm-3">
-                            <a href="/remove-cart/{{ $products_item->cart_id }}">
-                                <button class="btn btn-warning">
-                                    Delete Product
-                                </button></a>
-                        </div>
+                        <h4>No items added in cart</h4>
                     </div>
 
-
-
-                @endforeach
-
-
+                @endif
             </div>
         </div>
     </div>

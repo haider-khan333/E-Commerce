@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
 use App\Models\cart;
+use App\Models\order;
 
 use Illuminate\Http\Request;
 
@@ -36,6 +37,20 @@ class CartController extends Controller
 
     function payment_details(Request $request)
     {
-        return $request;
+        $user_id = Session::get("user")["id"];
+        $all_items_from_cart = cart::where("users_id", $user_id)->get();
+        foreach ($all_items_from_cart as $cart) {
+            $order_object = new order;
+            $order_object->product_id = $cart["products_id"];
+            $order_object->user_id = $cart["users_id"];
+            $order_object->status = "Pending";
+            $order_object->payment_method = $request->options;
+            $order_object->payment_status = "Pending";
+            $order_object->address = $request->address;
+            $order_object->save();
+            cart::where("users_id", $user_id)->delete();
+        }
+
+        return redirect("/");
     }
 }
