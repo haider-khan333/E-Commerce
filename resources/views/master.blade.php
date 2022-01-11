@@ -23,6 +23,11 @@
             border-radius: 30px;
         }
 
+        div.about_us_style_2 {
+            width: 100px;
+            height: 300px;
+        }
+
 
         .footer-basic {
             padding: 50px;
@@ -83,6 +88,16 @@
 
         .footer-basic li {
             padding: 0 10px;
+        }
+
+        div.about_us_header {
+            height: 150px;
+            background-color: #1D4350;
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        div.about_us_style_1 {
+            color: #aaa;
         }
 
         .footer-basic ul a {

@@ -32,7 +32,7 @@
                     <h4>Address:</h4>
                     <Address>
                         <textarea class="form-control mt-3" id="address" name="address" rows="3"
-                            placeholder="Enter your address here"></textarea>
+                            placeholder="Enter your address here" required></textarea>
                     </Address>
                 </div>
 

@@ -1,6 +1,5 @@
 <?php
 use App\Http\Controllers\ProductController;
-
 try {
     $total_count = ProductController::getCartItems();
 } catch (\Throwable $th) {
@@ -8,8 +7,8 @@ try {
 }
 ?>
 
-<section class="ftco-section">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+<section class="section">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="navbar">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,16 +16,6 @@ try {
             </button>
             <form action="#" class="searchform order-lg-last">
                 <div class="row">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <input type="text" class="form-control pl-3" placeholder="Search Products">
-                        </div>
-                        <div class="col-md-4">
-                            <button type="submit" placeholder="" class="btn btn-primary">Search</button>
-                        </div>
-
-                    </div>
-
                     <div class="row-md-12">
                         <div class="col-md-12">
                             @if (Session::has('user'))
@@ -67,7 +56,13 @@ try {
                         <li class="nav-item"><a href="/login" class="nav-link">Orders</a></li>
                     @endif
 
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    @if (Session::has('user'))
+                        <li class="nav-item"><a href="/about_us" class="nav-link">About</a></li>
+                    @else
+                        <li class="nav-item"><a href="/login" class="nav-link">About</a></li>
+                    @endif
+
+
                     @if (Session::has('user'))
                         <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
 

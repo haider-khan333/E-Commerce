@@ -1,7 +1,6 @@
 @extends('master')
 @section('content')
 
-
     <div class="container">
         <div class="row mt-4 justify-content-center">
 
@@ -22,6 +21,8 @@
                         </div>
                         <button class=" btn btn-success" type="submit">Login</button>
                         <hr>
+
+
 
                     </div>
                 </form>
