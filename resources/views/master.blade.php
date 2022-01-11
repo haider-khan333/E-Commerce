@@ -15,13 +15,14 @@
 
     <title>Gardezi Products</title>
     <style>
-        div.login-wrap {
-            background-color: #aaa;
+        div.text-wrap {
+            background: linear-gradient(to left, #A43931, #1D4350);
         }
 
-        div.text-wrap {
-            background-color: pink;
+        .btn {
+            border-radius: 30px;
         }
+
 
         .footer-basic {
             padding: 50px;

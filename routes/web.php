@@ -34,3 +34,5 @@ Route::get("remove-cart/{id}", [CartController::class, "removeCart"]);
 Route::get("order_now", [CartController::class, "orderNow"]);
 Route::post("payment_details", [CartController::class, "payment_details"]);
 Route::get("my-orders", [MyOrderController::class, "my_orders"]);
+Route::post("signup", [UserController::class, "signup"]);
+Route::post("user_signed_up", [UserController::class, "user_signed_up"]);

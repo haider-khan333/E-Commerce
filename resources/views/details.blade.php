@@ -18,15 +18,8 @@
                     <input type="hidden" name="product_id" id="product_id" value="{{ $products['id'] }}">
                     <button class="btn btn-primary">Add to Cart</button>
                 </form>
-                <br><br>
-                <button class="btn btn-success">Buy</button>
-
-                @if (session()->has('message'))
-                    <div class="alert alert-success">
-                        {{ session()->get('message') }}
-                    </div>
-                @endif
-
+                {{-- <br><br>
+                <button class="btn btn-success">Buy</button> --}}
             </div>
         </div>
     </div>

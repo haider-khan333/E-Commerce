@@ -61,7 +61,12 @@ try {
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a href="/" class="nav-link">E-Gardezi | </a></li>
-                    <li class="nav-item"><a href="/my-orders" class="nav-link">Orders</a></li>
+                    @if (Session::has('user'))
+                        <li class="nav-item"><a href="/my-orders" class="nav-link">Orders</a></li>
+                    @else
+                        <li class="nav-item"><a href="/login" class="nav-link">Orders</a></li>
+                    @endif
+
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                     @if (Session::has('user'))
                         <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
