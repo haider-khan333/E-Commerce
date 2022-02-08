@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\about_us;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -38,10 +40,36 @@ class UserController extends Controller
         return redirect("/login");
     }
 
+    function forgot_password()
+    {
+        return view("forgot_password");
+    }
+
     function about_us()
     {
         return view("about_us");
     }
+
+    function resetpassword(Request $request)
+    {
+        $user_data = User::where(["email" => $request->email])->first();
+        if (!$user_data || ($request->password != $request->forget_pass)) {
+            return back()->with('error', 'Password doesnot match');
+            // return redirect("/forgot_password");
+            // return redirect()->back()->with(['message' => 'A message to display']);
+        } else if ($request->email != $user_data->email) {
+            // return redirect("/forgot_password");
+            return back()->with('error', 'Email not found');
+            // return redirect()->back()->with(['message' => 'A message to display']);
+            // return redirect()->back()->with(['message' => 'Record is saved into the database', 'alert' => 'alert-success']);
+        } else {
+            $new_hashed_password = Hash::make($request->password);
+            DB::update('update users set password = ? where email = ?', [$new_hashed_password, $user_data->email]);
+        }
+        return redirect("/login");
+    }
+
+
 
     function form_submitted(Request $req)
     {

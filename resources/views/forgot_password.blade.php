@@ -3,32 +3,28 @@
 
     <div class="container">
         <div class="row mt-4 justify-content-center">
-
             <div class="col-md-6 p-0">
-                <form action="login" method="POST">
+                <form action="/resetpassword" method="POST">
                     <div class="login-wrap p-5 text-center">
                         @csrf
-                        <h2 class="text-left">Login</h2>
-                        <p class="mb-5 text-left">Please enter your login and password!</p>
+                        <h2 class="text-left">Reset Password</h2>
+                        <p class="mb-5 text-left">Please enter your new password</p>
 
                         <div class="form-outline form-white mb-4">
-                            <input type="email" id="login_email" class="form-control form-control-lg" placeholder="Email"
-                                name="email" style="border-radius: 30px;" required />
+                            <input type="email" id="email" class="form-control form-control-lg"
+                                placeholder="Enter your Email" name="email" style="border-radius: 30px;" required />
+                        </div>
+
+                        <div class="form-outline form-white mb-4">
+                            <input type="password" id="login_password" class="form-control form-control-lg"
+                                placeholder="New Password!" name="password" style="border-radius: 30px;" required />
                         </div>
                         <div class="form-outline form-white mb-4">
                             <input type="password" id="login_password" class="form-control form-control-lg"
-                                placeholder="Password" name="password" style="border-radius: 30px;" required />
+                                placeholder="Repeat Password!" name="forget_pass" style="border-radius: 30px;" required />
                         </div>
-                        <div class="form-outline form-white mb-4 text-left">
-                            <a href="/forgot_password">Forgot Password?</a>
-                        </div>
-
-
-                        <button class=" btn btn-success" type="submit">Login</button>
+                        <button class="btn btn-success mt-3" type="submit">Change Password</button>
                         <hr>
-
-
-
                     </div>
                 </form>
             </div>
@@ -40,19 +36,10 @@
                                 Lets shop!</em> </h3>
                         <p class="mt-5 mb-5">Click below to Register!</p>
                     </div>
-                    <form action="signup" method="post">
-                        @csrf
-                        <button class="
-                            btn btn-success mb-1">
-                            Register
-                        </button>
-
-                    </form>
-
-                    <hr>
                 </div>
             </div>
         </div>
+
     </div>
 
 

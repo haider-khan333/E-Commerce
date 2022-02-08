@@ -1,7 +1,38 @@
+div.text-wrap {
+    background: linear-gradient(to left, #a43931, #1d4350);
+    height: 400px;
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+div.about_us_style_2 {
+    width: 100px;
+    height: 300px;
+}
+
 .footer-basic {
-    padding: 40px 0;
-    background-color: #ffffff;
+    /* margin-top: auto; */
+    background-color: white;
     color: #4b4c4d;
+    /* position: relative; */
+    /* clear: both; */
+}
+
+div.footer_fix {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+    display: block;
+}
+
+a.carousel-control-prev,
+a.carousel-control-next {
+    filter: invert(100%);
 }
 
 .footer-basic ul {
@@ -13,41 +44,75 @@
     margin-bottom: 0;
 }
 
+img.slider_img {
+    height: 400px !important;
+}
+
+img.trending-images {
+    height: 100px;
+}
+
+div.product_design {
+    background-color: #d6cff2;
+    border-radius: 20px;
+    height: 50px;
+}
+
+div.mobile_design {
+    background-color: #d6cff2;
+    border-radius: 5px;
+    width: 150px;
+}
+
+div.divider {
+    border-bottom: 1px solid #aaa;
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+div.cart_products {
+    padding: 20px;
+}
+
+div.trending-all-images {
+    float: left;
+    width: 25%;
+}
+
+div.trending-style {
+    padding: 10px;
+}
+
+img.details-img-style {
+    height: 200px;
+}
+
+div.product_style {
+    height: 100%;
+}
+
+div.details_style {
+    display: flex;
+}
+
 .footer-basic li {
     padding: 0 10px;
+}
+
+div.about_us_header {
+    height: 150px;
+    background-color: #1d4350;
+    border-radius: 0px 0px 20px 20px;
+}
+
+div.about_us_style_1 {
+    color: #aaa;
 }
 
 .footer-basic ul a {
     color: inherit;
     text-decoration: none;
     opacity: 0.8;
-}
-
-.footer-basic ul a:hover {
-    opacity: 1;
-}
-
-.footer-basic .social {
-    text-align: center;
-    padding-bottom: 25px;
-}
-
-.footer-basic .social > a {
-    font-size: 24px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    margin: 0 8px;
-    color: inherit;
-    opacity: 0.75;
-}
-
-.footer-basic .social > a:hover {
-    opacity: 0.9;
 }
 
 .footer-basic .copyright {

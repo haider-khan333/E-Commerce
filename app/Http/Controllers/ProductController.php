@@ -36,9 +36,19 @@ class ProductController extends Controller
         }
     }
 
+    static function getId(string $category)
+    {
+        return Product::where("products_category", $category)->first()->id;
+    }
+
     static function getCartItems()
     {
         $user_id = Session::get("user")["id"];
         return Cart::where("users_id", $user_id)->count();
+    }
+
+    static function getTotalProducts(int $id)
+    {
+        return Cart::where("products_id", $id)->count();
     }
 }

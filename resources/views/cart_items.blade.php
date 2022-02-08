@@ -6,6 +6,12 @@ try {
 } catch (\Throwable $th) {
     $total_count = 0;
 }
+
+function getTotal(int $id)
+{
+    return ProductController::getTotalProducts($id);
+}
+
 ?>
 @extends("master")
 
@@ -42,7 +48,7 @@ try {
                                 <h6>{{ $products_item->products_description }}</h6>
                             </div>
                             <div class="col-sm-3">
-                                <h4>Total products 0</h4>
+                                <h4>Total products : {{ getTotal($products_item->id) }}</h4>
                             </div>
                             <div class="col-sm-3">
                                 <a href="/remove-cart/{{ $products_item->cart_id }}">

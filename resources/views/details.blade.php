@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
     <br>
-    <div class="container">
+    <div class="container details_style">
         <div class="row">
             <div class="col-sm-6">
                 <img class="details-img-style" src="{{ $products['products_gallery'] }}" alt="">
@@ -18,8 +18,6 @@
                     <input type="hidden" name="product_id" id="product_id" value="{{ $products['id'] }}">
                     <button class="btn btn-primary">Add to Cart</button>
                 </form>
-                {{-- <br><br>
-                <button class="btn btn-success">Buy</button> --}}
             </div>
         </div>
     </div>

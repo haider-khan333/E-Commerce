@@ -66,7 +66,7 @@ try {
                     @if (Session::has('user'))
                         <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
 
-                    @else
+                    @else 
                         <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
                     @endif
 

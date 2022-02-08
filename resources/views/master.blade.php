@@ -9,14 +9,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>\
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 
 
+
+    <link rel="stylesheet" href="resources/css/styles.css">
 
     <title>Gardezi Products</title>
     <style>
         div.text-wrap {
             background: linear-gradient(to left, #A43931, #1D4350);
+            height: 450px;
         }
 
         .btn {
@@ -28,11 +34,23 @@
             height: 300px;
         }
 
-
         .footer-basic {
-            padding: 50px;
+            /* margin-top: auto; */
             background-color: white;
             color: #4b4c4d;
+            /* position: relative; */
+            /* clear: both; */
+        }
+
+        div.footer_fix {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            background-color: #f5f5f5;
+            display: block;
+
         }
 
         a.carousel-control-prev,
@@ -58,6 +76,18 @@
 
         }
 
+        div.product_design {
+            background-color: #D6CFF2;
+            border-radius: 20px;
+            height: 50px;
+        }
+
+        div.mobile_design {
+            background-color: #D6CFF2;
+            border-radius: 5px;
+            width: 150px;
+        }
+
         div.divider {
             border-bottom: 1px solid #aaa;
             margin: 20px;
@@ -70,7 +100,8 @@
 
         div.trending-all-images {
             float: left;
-            width: 20%;
+            width: 25%;
+
         }
 
         div.trending-style {
@@ -83,7 +114,11 @@
         }
 
         div.product_style {
-            height: 500px;
+            height: 100%;
+        }
+
+        div.details_style {
+            display: flex;
         }
 
         .footer-basic li {
@@ -118,9 +153,11 @@
 </head>
 
 <body>
+
     {{ View::make('header') }}
     @yield('content')
     {{ View::make('footer') }}
+
 
 </body>
 

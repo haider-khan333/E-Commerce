@@ -40,6 +40,30 @@ class ProductSeeder extends Seeder
                 "products_description" => "Beautiful Samsung A12, 3 gb ram, 256 gb ROM",
                 "products_category" => "Mobiles",
                 "products_gallery" => "https://www.mytrendyphone.eu/images/Samsung-Galaxy-A12-64GB-Black-8806090828126-25012021-01-p.jpg"
+            ], [
+                "products_name" => "Sony Bravo Tv",
+                "products_price" => "200",
+                "products_description" => "Sony 55'', Class X80j Series, LED 4k Series Smart Google Tv",
+                "products_category" => "Television",
+                "products_gallery" => "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6450/6450688_bd.jpg"
+            ], [
+                "products_name" => "Sony TZ OLED",
+                "products_price" => "500",
+                "products_description" => "OLED Tv, 70'' Class X10J Series, 4k Smart Tv",
+                "products_category" => "Television",
+                "products_gallery" => "https://www.sony.com/image/4dfd9ca48ba82b26b620b9049c099665?fmt=pjpeg&wid=660&hei=660&bgcolor=F1F5F9&bgc=F1F5F9"
+            ], [
+                "products_name" => "HP Laptop 15",
+                "products_price" => "1000",
+                "products_description" => "Hp laptop 15 model, Core i-9, RAM 16 GB, ROM 516 SSD, 13'' touch screen",
+                "products_category" => "Laptop",
+                "products_gallery" => "https://mrlaptop.pk/wp-content/uploads/2020/04/copy-hp-15-da-1-1425-168011-120319051007.jpg"
+            ], [
+                "products_name" => "HP Envy 14",
+                "products_price" => "972",
+                "products_description" => "Hp Envy 14 Dragonfly Max laptop, Core i-9, RAM 8 GB, ROM 516 SSD, 13'' touch screen",
+                "products_category" => "Laptop",
+                "products_gallery" => "https://i.gadgets360cdn.com/large/hp_envy_14_1_1610345090137.jpg"
             ]
 
         ]);

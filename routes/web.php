@@ -38,3 +38,5 @@ Route::post("signup", [UserController::class, "signup"]);
 Route::post("user_signed_up", [UserController::class, "user_signed_up"]);
 Route::get("about_us", [UserController::class, "about_us"]);
 Route::post("form_submitted", [UserController::class, "form_submitted"]);
+Route::get("forgot_password", [UserController::class, "forgot_password"]);
+Route::post("resetpassword", [UserController::class, "resetpassword"]);
